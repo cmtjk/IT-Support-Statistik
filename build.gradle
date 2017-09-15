@@ -1,0 +1,15 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.1'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+mainClassName = "de.r3r57.itsupport.statistik.Starter"
+
+jar {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+}
